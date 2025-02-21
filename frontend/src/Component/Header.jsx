@@ -25,7 +25,7 @@ const pages = [
   },
   {
     name: 'Add Todo',
-    link: '/home',
+    link: '/todo',
   },
 ];
 const settings = [{ profile: 'Profile' }, { logout: 'Logout' }];

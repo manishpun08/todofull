@@ -1,14 +1,17 @@
-import React from "react";
-import { Outlet } from "react-router-dom";
-import Header from "../Component/Header";
-import CustomSnackbar from "../Component/CustomSnackbar";
+import React from 'react';
+import { Outlet } from 'react-router-dom';
+import Header from '../Component/Header';
+import CustomSnackbar from '../Component/CustomSnackbar';
+import AuthGuard from '../guards/AuthGuard';
 
 const MainLayout = () => {
   return (
     <>
-      <Header />
-      <Outlet />
-      <CustomSnackbar/>
+      <AuthGuard>
+        <Header />
+        <Outlet />
+        <CustomSnackbar />
+      </AuthGuard>
     </>
   );
 };
